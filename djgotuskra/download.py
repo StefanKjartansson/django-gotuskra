@@ -10,6 +10,7 @@ import itertools
 import requests
 
 from .models import Postnumer, Street
+from .conf import settings
 
 
 def download_file(url):
@@ -24,8 +25,8 @@ def download_postcodes():
     """
     Downloads the Postnumer objects
     """
-    url = 'http://www.postur.is/gogn/Gotuskra/postnumer.txt'
-    for code, place, address in download_file(url):
+    for code, place, address in \
+            download_file(settings.GOTUSKRA_PNR_URL):
         yield Postnumer(code=int(code), place=place, address=address)
 
 
@@ -33,12 +34,12 @@ def download_streets():
     """
     Downloads the Street objects
     """
-    url = 'http://www.postur.is/gogn/Gotuskra/gotuskra.txt'
-
     #lookup dictionary to speed things up a bit.
     pnr_dict = dict((i.code, i) for i in Postnumer.objects.all())
 
-    for id, pnr, heiti_nf, heiti_thfg in download_file(url):
+    for id, pnr, heiti_nf, heiti_thfg in \
+            download_file(settings.GOTUSKRA_URL):
+
         yield Street(id=int(id), postnumer=pnr_dict[int(pnr)],
             heiti_nf=heiti_nf, heiti_thfg=heiti_thfg)
 
