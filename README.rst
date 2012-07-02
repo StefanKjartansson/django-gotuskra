@@ -5,7 +5,8 @@ django-gotuskra
 Overview
 ========
 
-Icelandic post codes and street addresses for Django
+Icelandic post codes and street addresses for Django. Downloads and
+bootstraps with data from the Icelandic post office.
 
 Installation
 ============
