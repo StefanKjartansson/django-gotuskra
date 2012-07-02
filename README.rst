@@ -5,7 +5,7 @@ django-gotuskra
 Overview
 ========
 
-Foobar
+Icelandic post codes and street addresses for Django
 
 Installation
 ============
@@ -20,3 +20,5 @@ To install using `pip`,::
 To install using `easy_install`,::
 
     $ easy_install -U django-gotuskra
+
+Add `djgotuskra` to INSTALLED_APPS and run syncdb
