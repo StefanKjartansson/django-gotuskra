@@ -147,8 +147,17 @@ class RunTests(Command):
 required = [
     'Django>=1.4',
     'requests>=0.13.2',
+    'django-model-utils>=1.1.0',
+    'django-appconf>=0.5',
 ]
+
 entry_points = {}
+
+
+tests_require = [
+    'coverage==3.5.2',
+    'django-nose==1.1',
+]
 
 
 setup(
@@ -172,4 +181,6 @@ setup(
     package_data=find_package_data(),
     cmdclass={"test": RunTests},
     include_package_data=True,
+    tests_require=tests_require,
+    extras_require={'test': tests_require},
 )
