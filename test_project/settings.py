@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 DEBUG = True
 
 DATABASES = {
@@ -19,3 +22,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'djgotuskra',
 )
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = ['djgotuskra',
+    '--failed',
+    '--stop',
+    '--with-coverage',
+    '--cover-erase',
+    '--cover-package=djgotuskra',
+    '--cover-tests',
+]
