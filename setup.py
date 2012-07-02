@@ -144,7 +144,10 @@ class RunTests(Command):
         os.chdir(this_dir)
 
 
-required = ['django', ]
+required = [
+    'Django>=1.4',
+    'requests>=0.13.2',
+]
 entry_points = {}
 
 

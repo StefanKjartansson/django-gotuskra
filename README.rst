@@ -2,6 +2,11 @@
 django-gotuskra
 ===============
 
+Overview
+========
+
+Foobar
+
 Installation
 ============
 
