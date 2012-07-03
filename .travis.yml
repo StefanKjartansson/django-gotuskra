@@ -5,7 +5,5 @@ python:
 install:
   - pip install django-nose coverage
   - pip install -e .
-before_script:
-  - flake8 djgotuskra --ignore=E501
 script:
   - python setup.py test
