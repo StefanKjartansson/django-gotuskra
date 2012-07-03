@@ -1,25 +1,39 @@
 ===============
-django-gotuskra
+Django Gotuskra
 ===============
 
-Overview
-========
+[![Build Status](https://secure.travis-ci.org/StefanKjartansson/django-gotuskra.png?branch=master)](http://travis-ci.org/StefanKjartansson/django-gotuskra)
 
-Icelandic post codes and street addresses for Django. Downloads and
-bootstraps with data from the Icelandic post office.
+**Django Gotuskra** is a pluggable application for the `Django Web Framework`_
+providing Icelandic post codes and street names. Downloads and bootstraps
+the database tables using csv files from the Icelandic post office.
 
-Installation
-============
+Project page
+    https://github.com/StefanKjartansson/django-gotuskra
 
-You can install django-gotuskra either via the Python Package Index (PyPI)
-or from source.
+.. _`Django Web Framework`: http://www.djangoproject.com
 
-To install using `pip`,::
 
-    $ pip install -U django-gotuskra
+Installing & Setup
+==================
 
-To install using `easy_install`,::
+**Django Gotuskra** is in the `Python Package Index (PyPI)`_ and you can easily install
+the latest stable version of it using the tools ``pip`` or
+``easy_install``. Try::
 
-    $ easy_install -U django-gotuskra
+  pip install django-gotuskra
 
-Add `djgotuskra` to INSTALLED_APPS and run syncdb
+or::
+
+  easy_install django-gotuskra
+
+.. _`Python Package Index (PyPI)`: http://pypi.python.org
+
+
+Alternatively, you can install **Django Gotuskra** from source code running the follow
+command on directory that contains the file ``setup.py``::
+
+  python setup.py install
+
+After installation you need configure your project to recognize the application
+by adding ``'djgotuskra'`` to your ``INSTALLED_APPS`` setting and running syncdb.
