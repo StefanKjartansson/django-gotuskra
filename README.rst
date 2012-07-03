@@ -2,7 +2,8 @@
 Django Gotuskra
 ===============
 
-[![Build Status](https://secure.travis-ci.org/StefanKjartansson/django-gotuskra.png?branch=master)](http://travis-ci.org/StefanKjartansson/django-gotuskra)
+.. image:: https://secure.travis-ci.org/StefanKjartansson/django-gotuskra.png?branch=master
+        :target: https://secure.travis-ci.org/StefanKjartansson/django-gotuskra
 
 **Django Gotuskra** is a pluggable application for the `Django Web Framework`_
 providing Icelandic post codes and street names. Downloads and bootstraps
