@@ -27,8 +27,10 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = ['djgotuskra',
     '--failed',
     '--stop',
-    '--with-coverage',
+    #'--with-coverage',
     '--cover-erase',
     '--cover-package=djgotuskra',
     '--cover-tests',
+    '--with-xcoverage',
+    '--with-xunit',
 ]
