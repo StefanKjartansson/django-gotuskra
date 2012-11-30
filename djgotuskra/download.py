@@ -25,7 +25,7 @@ def download_postcodes():
     """
     Downloads the Postnumer objects
     """
-    for code, place, address in \
+    for code, place, _, _, address in \
             download_file(settings.GOTUSKRA_PNR_URL):
         yield Postnumer(code=int(code), place=place, address=address)
 
