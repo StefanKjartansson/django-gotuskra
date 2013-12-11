@@ -155,8 +155,8 @@ entry_points = {}
 
 
 tests_require = [
-    'coverage==3.5.2',
-    'django-nose==1.1',
+    'coverage==3.7',
+    'django-nose==1.2',
 ]
 
 
