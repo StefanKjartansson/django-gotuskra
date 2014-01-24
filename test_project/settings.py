@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from django.utils.crypto import get_random_string
+
+
 DEBUG = True
 
 DATABASES = {
@@ -34,3 +37,7 @@ NOSE_ARGS = ['djgotuskra',
     '--with-xcoverage',
     '--with-xunit',
 ]
+
+
+chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+SECRET_KEY = get_random_string(50, chars)
