@@ -40,7 +40,12 @@ def download_streets():
     for id, pnr, heiti_nf, heiti_thfg in \
             download_file(settings.GOTUSKRA_URL):
 
-        yield Street(id=int(id), postnumer=pnr_dict[int(pnr)],
+        pnr = int(pnr)
+        if pnr not in pnr_dict:
+            # todo, log
+            continue
+
+        yield Street(id=int(id), postnumer=pnr_dict[pnr],
             heiti_nf=heiti_nf, heiti_thfg=heiti_thfg)
 
 
