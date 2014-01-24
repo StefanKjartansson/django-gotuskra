@@ -12,3 +12,5 @@ env/
 .coverage
 test.db
 local_settings.py
+coverage.xml
+nosetests.xml
