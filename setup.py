@@ -134,13 +134,10 @@ class RunTests(Command):
         testproj_dir = os.path.join(this_dir, "test_project")
         os.chdir(testproj_dir)
         sys.path.append(testproj_dir)
-        from django.core.management import execute_manager
+        from django.core.management import execute_from_command_line as cli
         os.environ["DJANGO_SETTINGS_MODULE"] = os.environ.get(
                 "DJANGO_SETTINGS_MODULE", "settings")
-        settings_file = os.environ["DJANGO_SETTINGS_MODULE"]
-        settings_mod = __import__(settings_file, {}, {}, [''])
-        execute_manager(settings_mod, argv=[
-            __file__, "test"])
+        cli([__file__, 'test'])
         os.chdir(this_dir)
 
 
